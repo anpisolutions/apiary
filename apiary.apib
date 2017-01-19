@@ -2,37 +2,30 @@ FORMAT: 1A
 HOST: https://atlas.uat.anpi.com
 
  
-# API DOCUMENTATION
-  List of APIs used in Workflows, Transactions and Service Order.
+# VoyantConnect API 
+  Welcome to the VoyantConnect API documentation library, where you will find everything you need to code to our API. If something is missing or unclear, don’t hesitate to let us know!
 
-# WORKFLOW APIs 
- Below listed apis are in Workflows.
-+ Dependant Task API
-+ Gates API
-+ Partner System Task Dependencies API
-+ Partner System Tasks API
-+ System Task Dependencies API
-+ System Tasks API
-+ Task Templates API
-+ Tasks API
-+ Workflows API
+# Allowed HTTP Requests
+  Below is a list of the HTTP verbs accepted by our API. POST : To create a resource PUT : To update a resource GET : Get a resource or list of resources DELETE : To delete or disable resource
 
-# TRANSACTION APIs
- Below listed apis are in Transactions.
-+ Dependant Task Transaction Controller API
-+ Gate Transactions API
-+ Jeopardy Codes API
-+ Jeopardy Transactions API
-+ Task Transactions API
-+ Workflow Transactions
+# Server Responses
+  Your HTTP request will generate one of the server responses below. Generally, if you get a 200, you’re good to go. Otherwise, go back and check your request for errors.
++ 200 OK - the request was successful.
++ 400 Bad Request - the request could not be understood or was missing required parameters.
++ 401 Unauthorized - authentication failed or user doesn't have permissions for requested operation.
++ 403 Forbidden - access denied.404 Not Found - resource was not found
++ 405 Method Not Allowed - requested method is not supported for resource.
 
-# SERVICE ORDER APIs
- Below listed apis are in Service Orders.
-+ Caching API
-+ Change Request API
-+ Notes API
-+ Orders API 
+# Required Parameters
+  Every request to the API requires a valid Authorization. You can set the Authorization value as an HTTP parameter. For example: 
+  <pre>https://api.uat.anpi.com/1/25/100?Authorization=### </pre>
 
+# Required Headers
+  All requests to the API that send JSON require a header so the incoming JSON string is recognized. Your request may not be accepted or processed correctly without the Content-Type header. All requests made to the API should include the header: 
+  <pre>Content-Type: application/json: charset=utf-8</pre>
+ 
+# Pagination
+  Many requests support paginated properties. These are typically the page number (starting at page 1), size of the page of results, and sort order. Valid values for sort order are ASC and DESC to sort either ascending or descending.
 
 # Group Dependant Task API
 
