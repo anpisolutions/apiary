@@ -9187,6 +9187,116 @@ Assign a Workflow
               }
             }
 
+#### Available System Tasks for order [GET /v1/transactions/workflow_transactions/order/{orderId}/system-tasks]
+
+Available System Tasks for order
++ Request
+    + Headers
+
+            Authorization: Enter your authorization code
+
+
++ Parameters
+
+    + orderId (required)
+
++ Response 200
+
+    successful operation
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "body": {
+                  "type": "object",
+                  "properties": {
+                    "knownEmpty": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              }
+            }
+
+
+
+
+#### Check can reassign order [GET /v1/transactions/workflow_transactions/order/{orderId}/can-reassign]
+
+Check can reassign order
++ Request
+    + Headers
+
+            Authorization: Enter your authorization code
+
++ Parameters
+
+    + orderId (required)
+
++ Response 200
+
+    successful operation
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "body": {
+                  "type": "object",
+                  "properties": {
+                    "knownEmpty": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              }
+            }
+
+
+#### Reassign workflow [PUT /v1/transactions/workflow_transactions/{orderId}/reassign-workflow]
+    Reassign workflows.
++ Request
+    + Headers
+
+            Authorization: Enter your authorization code
+
+
++ Parameters
+
+    + orderId (required)
+
++ Response 200
+
+    successful operation
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "body": {
+                  "type": "object",
+                  "properties": {
+                    "knownEmpty": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              }
+            }
+            
 
 
 #### Update cancel order [PUT /v1/transactions/workflow_transactions/order/{id}/cancel-order]
@@ -9259,82 +9369,6 @@ Assign a Workflow
             }
 
 
-
-#### Check can reassign order [GET /v1/transactions/workflow_transactions/order/{orderId}/can-reassign]
-
-Check can reassign order
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Parameters
-
-    + orderId (required)
-
-+ Response 200
-
-    successful operation
-
-    + Body
-
-    + Schema
-
-            {
-              "type": "object",
-              "properties": {
-                "body": {
-                  "type": "object",
-                  "properties": {
-                    "knownEmpty": {
-                      "type": "boolean",
-                      "default": false
-                    }
-                  }
-                }
-              }
-            }
-
-
-
-#### Available System Tasks for order [GET /v1/transactions/workflow_transactions/order/{orderId}/system-tasks]
-
-Available System Tasks for order
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-
-+ Parameters
-
-    + orderId (required)
-
-+ Response 200
-
-    successful operation
-
-    + Body
-
-    + Schema
-
-            {
-              "type": "object",
-              "properties": {
-                "body": {
-                  "type": "object",
-                  "properties": {
-                    "knownEmpty": {
-                      "type": "boolean",
-                      "default": false
-                    }
-                  }
-                }
-              }
-            }
-
-
-
 #### Update change order workflow [PUT /v1/transactions/workflow_transactions/{id}/change-order-workflow]
 
 Change Order
@@ -9347,42 +9381,6 @@ Change Order
 + Parameters
 
     + id (required)
-
-+ Response 200
-
-    successful operation
-
-    + Body
-
-    + Schema
-
-            {
-              "type": "object",
-              "properties": {
-                "body": {
-                  "type": "object",
-                  "properties": {
-                    "knownEmpty": {
-                      "type": "boolean",
-                      "default": false
-                    }
-                  }
-                }
-              }
-            }
-
-
-#### Reassign workflow [PUT /v1/transactions/workflow_transactions/{orderId}/reassign-workflow]
-    Reassign workflows.
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-
-+ Parameters
-
-    + orderId (required)
 
 + Response 200
 
